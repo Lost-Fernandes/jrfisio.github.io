@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fisioterapeuta Jr</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Fisioterapeuta Jr</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#services">Serviços</a></li>
+                <li><a href="#appointment">Agende uma Consulta</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h2>Cuide da sua saúde com um dos melhores especialistas</h2>
+        <p>Oferecemos tratamentos personalizados para garantir seu bem-estar.</p>
+        <a href="#appointment" class="btn">Agendar Consulta</a>
+    </section>
+
+    <section id="about">
+        <h2>Sobre Nós</h2>
+        <p>Sou um profissional clinico em fisioterapia com mais de 2 anos de experiência em tratamentos personalizados.</p>
+    </section>
+
+    <section id="services">
+        <h2>Serviços</h2>
+        <ul>
+            <li>Reabilitação pós-cirúrgica</li>
+            <li>Fisioterapia ortopédica</li>
+            <li>Fisioterapia esportiva</li>
+            <li>Pilates clínico</li>            
+        </ul>
+    </section>
+
+    <section id="appointment">
+        <h2>Agende sua Consulta</h2>
+        <form id="appointmentForm">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" placeholder="Seu nome" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Seu email" required>
+
+            <label for="phone">Telefone:</label>
+            <input type="text" id="phone" placeholder="Seu telefone" required>
+
+            <label for="service">Serviço:</label>
+            <select id="service" required>
+                <option value="">Escolha um serviço</option>
+                <option value="Reabilitação">Reabilitação pós-cirúrgica</option>
+                <option value="Ortopédica">Fisioterapia ortopédica</option>
+                <option value="Esportiva">Fisioterapia esportiva</option>
+                <option value="Pilates">Pilates clínico</option>
+            </select>
+
+            <label for="date">Data da Consulta:</label>
+            <input type="date" id="date" required>
+
+            <button type="button" class="btn" onclick="generatePDF()">Gerar PDF</button>
+            <br>
+            <button type="submit" class="btn">Marcar Consulta</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Desenvolvido por Pascoal Fernandes. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
